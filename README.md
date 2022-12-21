@@ -17,7 +17,7 @@ Inspect Helper是一个用于网络设备批量运维的工具类程序。该程
 * 此程序能够按顺序自动连接到目标网络设备，然后模拟用户输入预先设置好的命令行；
 * 在连接到设备后，将会记录自动输入的命令以及目标设备返回的显示结果，并保存成文本文件。
 <br>
-![](https://raw.githubusercontent.com/vincentmu42/Inspect-Helper/main/resources/screenshots/main_app.png)<br>
+![](./resources/screenshots/main_app.png)<br>
 
 # 使用方式
 
