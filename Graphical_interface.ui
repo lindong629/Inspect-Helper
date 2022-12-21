@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>850</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Inspect Helper GUI</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>resources/LOGO-128p.ico</normaloff>resources/LOGO-128p.ico</iconset>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(37, 37, 38)</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="Status_Label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>215</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;状态：等待执行&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="Progress_Bar">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>95</y>
+      <width>360</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>宋体</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>820</y>
+      <width>701</width>
+      <height>2</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(51, 51, 55);</string>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Version_Title_Label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>788</y>
+      <width>85</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>宋体</family>
+     </font>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;程序版本：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Version_Display_Label">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>788</y>
+      <width>100</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>宋体</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="dayTime_Display">
+    <property name="geometry">
+     <rect>
+      <x>335</x>
+      <y>5</y>
+      <width>255</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>宋体</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:#000000; color:#00ff00</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Title_Label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>285</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; color:#8bc34a;&quot;&gt;R&amp;amp;S设备批量运维&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Select_File_Label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>145</y>
+      <width>180</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;选择设备信息文件：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="File_Path_Edit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>175</y>
+      <width>425</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>宋体</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(51, 51, 55);
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Select_File_Button">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>172</y>
+      <width>101</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color: rgb(49, 54, 59);
+border: 2px;
+border-color: rgb(139, 195, 74);
+border-style: solid;
+border-radius: 0px;
+color: rgb(139, 195, 74);
+}
+QPushButton:hover{
+background-color: rgb(139, 195, 74);
+color: rgb(49, 54, 59);
+}
+QPushButton:pressed{
+background-color: rgb(0, 0, 0);
+border: 2px;
+border-color: rgb(255, 255, 255);
+border-style: solid;
+border-radius: 0px;
+color: rgb(255, 255, 255);
+}
+QPushButton:disabled{
+background-color: rgb(79, 91, 98);
+border: 2px;
+border-color: rgb(49, 54, 59);
+border-style: solid;
+border-radius: 0px;
+color: rgb(49, 54, 59);
+}</string>
+    </property>
+    <property name="text">
+     <string>选择文件</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Scripts_Label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>272</y>
+      <width>380</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;输入需要按顺序执行的命令（一行一个）：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="Scripts_Edit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>302</y>
+      <width>425</width>
+      <height>150</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(51, 51, 55);
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="plainText">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Start_Main_Task_Button">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>472</y>
+      <width>300</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color: rgb(49, 54, 59);
+border: 2px;
+border-color: rgb(139, 195, 74);
+border-style: solid;
+border-radius: 5px;
+color: rgb(139, 195, 74);
+}
+QPushButton:hover{
+background-color: rgb(139, 195, 74);
+color: rgb(49, 54, 59);
+}
+QPushButton:pressed{
+background-color: rgb(0, 0, 0);
+border: 2px;
+border-color: rgb(255, 255, 255);
+border-style: solid;
+border-radius: 5px;
+color: rgb(255, 255, 255);
+}
+QPushButton:disabled{
+background-color: rgb(79, 91, 98);
+border: 2px;
+border-color: rgb(49, 54, 59);
+border-style: solid;
+border-radius: 5px;
+color: rgb(49, 54, 59);
+}</string>
+    </property>
+    <property name="text">
+     <string>开始执行</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Message_Display_Label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>542</y>
+      <width>130</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;运行状态信息：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="Message_Display_Edit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>569</y>
+      <width>425</width>
+      <height>202</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="cursor" stdset="0">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(51, 51, 55);
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="plainText">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Open_Saved_Dir_Button">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>739</y>
+      <width>140</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color: rgb(49, 54, 59);
+border: 2px;
+border-color: rgb(139, 195, 74);
+border-style: solid;
+border-radius: 0px;
+color: rgb(139, 195, 74);
+}
+QPushButton:hover{
+background-color: rgb(139, 195, 74);
+color: rgb(49, 54, 59);
+}
+QPushButton:pressed{
+background-color: rgb(0, 0, 0);
+border: 2px;
+border-color: rgb(255, 255, 255);
+border-style: solid;
+border-radius: 0px;
+color: rgb(255, 255, 255);
+}
+QPushButton:disabled{
+background-color: rgb(79, 91, 98);
+border: 2px;
+border-color: rgb(49, 54, 59);
+border-style: solid;
+border-radius: 0px;
+color: rgb(49, 54, 59);
+}</string>
+    </property>
+    <property name="text">
+     <string>浏览保存目录</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="Connect_By_Telnet_Button">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>228</y>
+      <width>160</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>使用Telnet连接</string>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="Connect_By_SSH_Button">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>228</y>
+      <width>150</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>使用SSH连接</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Select_Protocol_Label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>224</y>
+      <width>150</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;选择连接方式：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Message_Display_Clear_Button">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>692</y>
+      <width>140</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color: rgb(49, 54, 59);
+border: 2px;
+border-color: rgb(255, 0, 0);
+border-style: solid;
+border-radius: 0px;
+color: rgb(255, 255, 127);
+}
+QPushButton:hover{
+background-color: rgb(255, 0, 0);
+color: rgb(255, 255, 255);
+}
+QPushButton:pressed{
+background-color: rgb(0, 0, 0);
+border: 2px;
+border-color: rgb(255, 0, 0);
+border-style: solid;
+border-radius: 0px;
+color: rgb(255, 255, 255);
+}
+QPushButton:disabled{
+background-color: rgb(79, 91, 98);
+border: 2px;
+border-color: rgb(49, 54, 59);
+border-style: solid;
+border-radius: 0px;
+color: rgb(49, 54, 59);
+}</string>
+    </property>
+    <property name="text">
+     <string>清空状态信息</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Start_Main_Task_Button_Fake">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>472</y>
+      <width>300</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color: rgb(49, 54, 59);
+border: 2px;
+border-color: rgb(139, 195, 74);
+border-style: solid;
+border-radius: 5px;
+color: rgb(139, 195, 74);
+}
+QPushButton:hover{
+background-color: rgb(139, 195, 74);
+color: rgb(49, 54, 59);
+}
+QPushButton:pressed{
+background-color: rgb(0, 0, 0);
+border: 2px;
+border-color: rgb(255, 255, 255);
+border-style: solid;
+border-radius: 5px;
+color: rgb(255, 255, 255);
+}
+QPushButton:disabled{
+background-color: rgb(79, 91, 98);
+border: 2px;
+border-color: rgb(49, 54, 59);
+border-style: solid;
+border-radius: 5px;
+color: rgb(49, 54, 59);
+}</string>
+    </property>
+    <property name="text">
+     <string>开始执行</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Message_Display_Clear_Button_Fake">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>692</y>
+      <width>140</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color: rgb(49, 54, 59);
+border: 2px;
+border-color: rgb(255, 0, 0);
+border-style: solid;
+border-radius: 0px;
+color: rgb(255, 255, 127);
+}
+QPushButton:hover{
+background-color: rgb(255, 0, 0);
+color: rgb(255, 255, 255);
+}
+QPushButton:pressed{
+background-color: rgb(0, 0, 0);
+border: 2px;
+border-color: rgb(255, 0, 0);
+border-style: solid;
+border-radius: 0px;
+color: rgb(255, 255, 255);
+}
+QPushButton:disabled{
+background-color: rgb(79, 91, 98);
+border: 2px;
+border-color: rgb(49, 54, 59);
+border-style: solid;
+border-radius: 0px;
+color: rgb(49, 54, 59);
+}</string>
+    </property>
+    <property name="text">
+     <string>清空状态信息</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Version_Title_Label_2">
+    <property name="geometry">
+     <rect>
+      <x>465</x>
+      <y>788</y>
+      <width>125</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>宋体</family>
+     </font>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;© 2022 Vincent&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <zorder>Message_Display_Clear_Button_Fake</zorder>
+   <zorder>Start_Main_Task_Button_Fake</zorder>
+   <zorder>Status_Label</zorder>
+   <zorder>Progress_Bar</zorder>
+   <zorder>line</zorder>
+   <zorder>Version_Title_Label</zorder>
+   <zorder>Version_Display_Label</zorder>
+   <zorder>dayTime_Display</zorder>
+   <zorder>Title_Label</zorder>
+   <zorder>Select_File_Label</zorder>
+   <zorder>File_Path_Edit</zorder>
+   <zorder>Select_File_Button</zorder>
+   <zorder>Scripts_Label</zorder>
+   <zorder>Scripts_Edit</zorder>
+   <zorder>Start_Main_Task_Button</zorder>
+   <zorder>Message_Display_Label</zorder>
+   <zorder>Message_Display_Edit</zorder>
+   <zorder>Open_Saved_Dir_Button</zorder>
+   <zorder>Connect_By_Telnet_Button</zorder>
+   <zorder>Connect_By_SSH_Button</zorder>
+   <zorder>Select_Protocol_Label</zorder>
+   <zorder>Message_Display_Clear_Button</zorder>
+   <zorder>Version_Title_Label_2</zorder>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
