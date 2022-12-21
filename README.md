@@ -2,8 +2,12 @@
 Inspect Helper是一个用于网络设备批量运维的工具类程序。该程序能够通过`SSH`或`Telnet`协议连接到目标网络设备（例如交换机、路由器等），然后自动执行您需要批量执行的命令行。命令执行后，目标设备返回的显示信息将保存在本程序所在目录下的`OutputFiles`目录中，以IP地址、主机名和时间命名。
 此程序可以用于帮助运维管理员自动、批量获取局域网内的交换机、路由器设备配置信息。
 
-[![996.icu](https://img.shields.io/badge/link-996.icu-%23FF4D5B.svg?style=flat-square)](https://996.icu)
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/vincentmu42/Inspect-Helper?include_prereleases)
+![GitHub](https://img.shields.io/github/license/vincentmu42/Inspect-Helper)
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg?style=flat-square)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
+[![996.icu](https://img.shields.io/badge/link-996.icu-%23FF4D5B.svg?style=flat-square)](https://996.icu)
+![GitHub last commit](https://img.shields.io/github/last-commit/vincentmu42/Inspect-Helper)
+
 
 # 功能介绍
 
@@ -12,6 +16,8 @@ Inspect Helper是一个用于网络设备批量运维的工具类程序。该程
 * 此程序从自身所在目录下的`DeviceInfo.xls`工作表中批量读取所需连接的设备的IP地址、用户名和密码信息；
 * 此程序能够按顺序自动连接到目标网络设备，然后模拟用户输入预先设置好的命令行；
 * 在连接到设备后，将会记录自动输入的命令以及目标设备返回的显示结果，并保存成文本文件。
+<br>
+![截图](./resources/screenshots/main_app.png)<br>
 
 # 使用方式
 
