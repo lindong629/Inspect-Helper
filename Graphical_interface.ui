@@ -13,7 +13,7 @@
     <x>0</x>
     <y>0</y>
     <width>600</width>
-    <height>850</height>
+    <height>875</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -47,8 +47,11 @@
       <bold>false</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: #ffffff;</string>
+    </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;状态：等待执行&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>状态：等待执行</string>
     </property>
    </widget>
    <widget class="QProgressBar" name="Progress_Bar">
@@ -77,7 +80,7 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>820</y>
+      <y>845</y>
       <width>701</width>
       <height>2</height>
      </rect>
@@ -93,7 +96,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>788</y>
+      <y>813</y>
       <width>85</width>
       <height>30</height>
      </rect>
@@ -111,7 +114,7 @@
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>788</y>
+      <y>813</y>
       <width>100</width>
       <height>30</height>
      </rect>
@@ -189,7 +192,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>145</y>
+      <y>170</y>
       <width>180</width>
       <height>28</height>
      </rect>
@@ -210,7 +213,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>175</y>
+      <y>200</y>
       <width>425</width>
       <height>25</height>
      </rect>
@@ -236,7 +239,7 @@ color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>450</x>
-      <y>172</y>
+      <y>197</y>
       <width>101</width>
       <height>32</height>
      </rect>
@@ -290,7 +293,7 @@ color: rgb(49, 54, 59);
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>272</y>
+      <y>297</y>
       <width>380</width>
       <height>28</height>
      </rect>
@@ -311,7 +314,7 @@ color: rgb(49, 54, 59);
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>302</y>
+      <y>327</y>
       <width>425</width>
       <height>150</height>
      </rect>
@@ -339,7 +342,7 @@ color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>150</x>
-      <y>472</y>
+      <y>497</y>
       <width>300</width>
       <height>50</height>
      </rect>
@@ -390,7 +393,7 @@ color: rgb(49, 54, 59);
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>542</y>
+      <y>567</y>
       <width>130</width>
       <height>25</height>
      </rect>
@@ -411,7 +414,7 @@ color: rgb(49, 54, 59);
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>569</y>
+      <y>594</y>
       <width>425</width>
       <height>202</height>
      </rect>
@@ -442,7 +445,7 @@ color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>450</x>
-      <y>739</y>
+      <y>764</y>
       <width>140</width>
       <height>32</height>
      </rect>
@@ -490,10 +493,13 @@ color: rgb(49, 54, 59);
     </property>
    </widget>
    <widget class="QRadioButton" name="Connect_By_Telnet_Button">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>330</x>
-      <y>228</y>
+      <y>253</y>
       <width>160</width>
       <height>20</height>
      </rect>
@@ -502,10 +508,12 @@ color: rgb(49, 54, 59);
      <font>
       <family>微软雅黑</family>
       <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
+     <string notr="true">color: rgb(255, 255, 127);</string>
     </property>
     <property name="text">
      <string>使用Telnet连接</string>
@@ -515,10 +523,13 @@ color: rgb(49, 54, 59);
     </property>
    </widget>
    <widget class="QRadioButton" name="Connect_By_SSH_Button">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>170</x>
-      <y>228</y>
+      <y>253</y>
       <width>150</width>
       <height>20</height>
      </rect>
@@ -527,10 +538,12 @@ color: rgb(49, 54, 59);
      <font>
       <family>微软雅黑</family>
       <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
+     <string notr="true">color: rgb(255, 255, 127);</string>
     </property>
     <property name="text">
      <string>使用SSH连接</string>
@@ -543,7 +556,7 @@ color: rgb(49, 54, 59);
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>224</y>
+      <y>249</y>
       <width>150</width>
       <height>28</height>
      </rect>
@@ -567,7 +580,7 @@ color: rgb(49, 54, 59);
     <property name="geometry">
      <rect>
       <x>450</x>
-      <y>692</y>
+      <y>717</y>
       <width>140</width>
       <height>32</height>
      </rect>
@@ -627,7 +640,7 @@ color: rgb(49, 54, 59);
     <property name="geometry">
      <rect>
       <x>150</x>
-      <y>472</y>
+      <y>497</y>
       <width>300</width>
       <height>50</height>
      </rect>
@@ -681,7 +694,7 @@ color: rgb(49, 54, 59);
     <property name="geometry">
      <rect>
       <x>450</x>
-      <y>692</y>
+      <y>717</y>
       <width>140</width>
       <height>32</height>
      </rect>
@@ -737,9 +750,9 @@ color: rgb(49, 54, 59);
    <widget class="QLabel" name="Version_Title_Label_2">
     <property name="geometry">
      <rect>
-      <x>465</x>
-      <y>788</y>
-      <width>125</width>
+      <x>405</x>
+      <y>813</y>
+      <width>185</width>
       <height>30</height>
      </rect>
     </property>
@@ -749,10 +762,34 @@ color: rgb(49, 54, 59);
      </font>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;© 2022 Vincent&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;© 2022-2023 Vincent慕远&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Count_Status_Label">
+    <property name="geometry">
+     <rect>
+      <x>64</x>
+      <y>130</y>
+      <width>350</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #8bc34a;</string>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
    <zorder>Message_Display_Clear_Button_Fake</zorder>
@@ -778,6 +815,7 @@ color: rgb(49, 54, 59);
    <zorder>Select_Protocol_Label</zorder>
    <zorder>Message_Display_Clear_Button</zorder>
    <zorder>Version_Title_Label_2</zorder>
+   <zorder>Count_Status_Label</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar">
    <property name="enabled">
