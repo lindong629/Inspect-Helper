@@ -14,7 +14,8 @@ Inspect Helper是一个用于网络设备批量运维的工具类程序。该程
 * **最新版下载：[点击此处](https://github.com/vincentmu42/Inspect-Helper/releases/latest)**
 * 此程序具有一个`GUI`界面；
 * 支持通过`SSH`协议、`Telnet`协议来连接网络设备（例如交换机、路由器），目标网络设备需要开启相应协议的连接功能，且已设置了用户名和密码；
-* 此程序从自身所在目录下的`DeviceInfo.xls`工作表中批量读取所需连接的设备的IP地址、用户名和密码信息；
+* 此程序从自身所在目录下的`DeviceInfo.xls`工作表中批量读取所需连接的设备的IP地址、用户名和密码等信息；
+* 从3.2.0版本开始，支持在`DeviceInfo.xls`工作表中自定义使用SSH建立连接时的目标端口号；
 * 此程序能够按顺序自动连接到目标网络设备，然后模拟用户输入预先设置好的命令行；
 * 在连接到设备后，将会记录自动输入的命令以及目标设备返回的显示结果，并保存成文本文件。
 <br>
@@ -61,14 +62,16 @@ Inspect Helper是一个用于网络设备批量运维的工具类程序。该程
 **`terminal length 0`**
 **或者：**
 **`screen-length 0`**
+**或者：**
+**`screen-length disable`**
 **（最后用`undo screen-length`来改回原来的配置）**
 **如果不配置这一步，当您输入回显较长（例如`show run`）的命令，最后保存的回显结果可能是不完整的，例如最后显示了“--More--”；**
 
-**7、在程序连接到目标设备后，如果程序窗口出现短暂未响应状态是正常情况，此时程序还在运行，等待任务执行完毕后会恢复响应，请不要多次点击未响应的窗口，防止程序被操作系统关闭。**
+**7、在程序连接到目标设备后，程序窗口出现未响应状态是正常情况，此时程序还在运行，等待任务执行完毕后会恢复响应，请不要多次点击未响应的窗口，防止程序被操作系统关闭。**
 
 # 源码的使用
 
-* 您的电脑上需要安装有Python环境，且已经正确添加到系统的环境变量（在安装Python环境软件时勾选“Add Python to Path”可自动配置环境变量）。本程序编写时使用的环境版本是“`Python 3.10.1`”，请使用此版本或更高版本的环境；
+* 您的电脑上需要安装有Python环境，且已经正确添加到系统的环境变量（在安装Python环境软件时勾选“Add Python to Path”可自动配置环境变量）。本程序编写时使用的环境版本是“`Python 3.12.3`”，请使用此版本或更高版本的环境；
 * 下载源码到本地，在源码主目录（“`requirements.txt`”所在的目录）下执行“`pip install -r requirements.txt`”来安装依赖的组件包；
 * 执行“`python Inspect-Helper.py`”来运行程序（`Inspect-Helper.py`）。
 * 程序的UI界面使用`PyQt5`制作。在上一步执行了“`pip install -r requirements.txt`”后，您的电脑上应该已经安装了`PyQt5`。在电脑上找到“`Qt Designer`”（例如从开始菜单的程序中查找），使用“`Qt Designer`”软件可打开“`Graphical_interface.ui`”文件来编辑界面。在编辑好之后，需要在命令行中执行“`pyuic5 -o .\Graphical_interface.py .\Graphical_interface.ui`”来将`.ui`文件转换为`.py`文件，程序运行时需要使用的是`.py`文件。

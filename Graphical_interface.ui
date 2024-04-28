@@ -747,7 +747,7 @@ color: rgb(49, 54, 59);
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="Version_Title_Label_2">
+   <widget class="QLabel" name="Copyright_Display_Label">
     <property name="geometry">
      <rect>
       <x>405</x>
@@ -814,7 +814,7 @@ color: rgb(49, 54, 59);
    <zorder>Connect_By_SSH_Button</zorder>
    <zorder>Select_Protocol_Label</zorder>
    <zorder>Message_Display_Clear_Button</zorder>
-   <zorder>Version_Title_Label_2</zorder>
+   <zorder>Copyright_Display_Label</zorder>
    <zorder>Count_Status_Label</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar">

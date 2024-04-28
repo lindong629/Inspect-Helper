@@ -1,3 +1,4 @@
 paramiko==2.10.3
-PyQt5==5.15.7
+PyQt5==5.15.10
+PyQt5_sip==12.13.0
 xlrd==2.0.1
