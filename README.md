@@ -12,6 +12,9 @@ Inspect Helper是一个用于网络设备批量运维的工具类程序。该程
 # 功能介绍
 
 * **最新版下载：[点击此处](https://github.com/vincentmu42/Inspect-Helper/releases/latest)**
+* 操作系统要求：Windows 8.1 及更高版本；
+  
+
 * 此程序具有一个`GUI`界面；
 * 支持通过`SSH`协议、`Telnet`协议来连接网络设备（例如交换机、路由器），目标网络设备需要开启相应协议的连接功能，且已设置了用户名和密码；
 * 此程序从自身所在目录下的`DeviceInfo.xls`工作表中批量读取所需连接的设备的IP地址、用户名和密码等信息；

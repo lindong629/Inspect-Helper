@@ -20,7 +20,7 @@ import validate_port_module
 
 # ********************************************************************************
 # * 
-# * Inspect Helper GUI v3.2.0          [ April 28, 2024 ]
+# * Inspect Helper GUI v3.2.1          [ April 29, 2024 ]
 # * Written by Vincent
 # * 
 # * Function: 
@@ -31,7 +31,7 @@ import validate_port_module
 # * 
 # ********************************************************************************
 
-ProgramVersion = "v3.2.0"
+ProgramVersion = "v3.2.1"
 
 
 def copyright_info_display():
@@ -144,13 +144,17 @@ def MainTask_SSH(Gui, WorkSheet):
         Gui.Message_Display_Edit.insertPlainText("设备: " + IPAddress + " 已连接……\n")
         Message_Display_Edit_Scroll(Gui)
         QApplication.processEvents()
-        time.sleep(2)
+        for sec in range(0, 2):
+            QApplication.processEvents()
+            time.sleep(1)
         Gui.Message_Display_Edit.insertPlainText("正在执行命令……\n")
         Message_Display_Edit_Scroll(Gui)
         QApplication.processEvents()
         while Script:                                     # 执行命令, 每一行执行一次。
             run_command.send(Script + "\n")
-            time.sleep(5)                                 # 每次执行后将程序暂停5秒钟, 给目标一个反应时间。
+            for sec in range(0, 5):                       # 每次执行后将程序暂停5秒钟, 给目标一个反应时间。
+                QApplication.processEvents()
+                time.sleep(1)                             # 不直接写sleep(5)是为了每隔一秒还要刷新一次GUI界面。
             Script = Scripts.readline()
             QApplication.processEvents()
         Scripts.close()
@@ -246,7 +250,9 @@ def MainTask_Telnet(Gui,WorkSheet):
             Unlock_Buttons(Gui)
             QApplication.processEvents()
             break
-        time.sleep(2)
+        for sec in range(0, 2):
+            QApplication.processEvents()
+            time.sleep(1)
         QApplication.processEvents()
         ReceivedMessage = Telnet_Client.read_very_eager().decode('ascii')
         if ('sername' in ReceivedMessage) or ('ogin' in ReceivedMessage):
@@ -269,7 +275,9 @@ def MainTask_Telnet(Gui,WorkSheet):
             Unlock_Buttons(Gui)
             QApplication.processEvents()
             break
-        time.sleep(2)
+        for sec in range(0, 2):
+            QApplication.processEvents()
+            time.sleep(1)
         QApplication.processEvents()
         LoginResult = Telnet_Client.read_very_eager().decode('utf-8', errors='ignore')
         if ('nvalid' in LoginResult) or ('ailed' in LoginResult):
@@ -296,13 +304,17 @@ def MainTask_Telnet(Gui,WorkSheet):
         Gui.Message_Display_Edit.insertPlainText("设备: " + IPAddress + " 已连接……\n")
         Message_Display_Edit_Scroll(Gui)
         QApplication.processEvents()
-        time.sleep(2)
+        for sec in range(0, 2):
+            QApplication.processEvents()
+            time.sleep(1)
         Gui.Message_Display_Edit.insertPlainText("正在执行命令……\n")
         Message_Display_Edit_Scroll(Gui)
         QApplication.processEvents()
         while Script:
             Telnet_Client.write(Script.encode('ascii') + b'\n')
-            time.sleep(5)
+            for sec in range(0, 5):
+                QApplication.processEvents()
+                time.sleep(1)
             Script = Scripts.readline()
             QApplication.processEvents()
         Scripts.close()
@@ -455,6 +467,10 @@ def Unlock_Buttons(Gui):
 
 
 if __name__ == '__main__':
+    # 以下两行用于适配在高分辨率屏幕下的界面显示效果
+    QCoreApplication.setAttribute(Qt.ApplicationAttribute.AA_EnableHighDpiScaling, True)
+    QCoreApplication.setAttribute(Qt.ApplicationAttribute.AA_UseHighDpiPixmaps, True)
+
     App = QApplication(sys.argv)
     MainWindow = QMainWindow()
     Gui = Graphical_interface.Ui_MainWindow()
