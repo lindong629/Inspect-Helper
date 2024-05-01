@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
+from PyQt5.QtGui import QGuiApplication
 from functools import partial
 from tkinter import messagebox
 from tkinter import filedialog
@@ -20,7 +21,7 @@ import validate_port_module
 
 # ********************************************************************************
 # * 
-# * Inspect Helper GUI v3.2.1          [ April 29, 2024 ]
+# * Inspect Helper GUI v3.2.2          [ May 1, 2024 ]
 # * Written by Vincent
 # * 
 # * Function: 
@@ -31,7 +32,7 @@ import validate_port_module
 # * 
 # ********************************************************************************
 
-ProgramVersion = "v3.2.1"
+ProgramVersion = "v3.2.2"
 
 
 def copyright_info_display():
@@ -467,9 +468,10 @@ def Unlock_Buttons(Gui):
 
 
 if __name__ == '__main__':
-    # 以下两行用于适配在高分辨率屏幕下的界面显示效果
+    # 以下3行用于适配在高分辨率屏幕下的界面显示效果
     QCoreApplication.setAttribute(Qt.ApplicationAttribute.AA_EnableHighDpiScaling, True)
     QCoreApplication.setAttribute(Qt.ApplicationAttribute.AA_UseHighDpiPixmaps, True)
+    QGuiApplication.setHighDpiScaleFactorRoundingPolicy(QApplication.highDpiScaleFactorRoundingPolicy().PassThrough)
 
     App = QApplication(sys.argv)
     MainWindow = QMainWindow()

@@ -12,8 +12,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>600</width>
-    <height>875</height>
+    <width>560</width>
+    <height>678</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -27,16 +27,17 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(37, 37, 38)</string>
+   <string notr="true">background-color: rgb(37, 37, 38);
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="Status_Label">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>90</y>
-      <width>215</width>
-      <height>25</height>
+      <y>79</y>
+      <width>165</width>
+      <height>24</height>
      </rect>
     </property>
     <property name="font">
@@ -48,7 +49,8 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: #ffffff;</string>
+     <string notr="true">color: #ffffff;
+</string>
     </property>
     <property name="text">
      <string>状态：等待执行</string>
@@ -57,10 +59,10 @@
    <widget class="QProgressBar" name="Progress_Bar">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>95</y>
+      <x>190</x>
+      <y>84</y>
       <width>360</width>
-      <height>15</height>
+      <height>14</height>
      </rect>
     </property>
     <property name="font">
@@ -70,7 +72,8 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
+     <string notr="true">color: #ffffff;
+</string>
     </property>
     <property name="value">
      <number>0</number>
@@ -80,7 +83,7 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>845</y>
+      <y>654</y>
       <width>701</width>
       <height>2</height>
      </rect>
@@ -96,48 +99,55 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>813</y>
-      <width>85</width>
-      <height>30</height>
+      <y>632</y>
+      <width>70</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>宋体</family>
+      <family>微软雅黑</family>
+      <pointsize>10</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: #ffffff;
+</string>
+    </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;程序版本：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>程序版本：</string>
     </property>
    </widget>
    <widget class="QLabel" name="Version_Display_Label">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>813</y>
+      <x>82</x>
+      <y>632</y>
       <width>100</width>
-      <height>30</height>
+      <height>20</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>宋体</family>
+      <family>微软雅黑</family>
+      <pointsize>10</pointsize>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
+     <string notr="true">color: #ffffff;
+</string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLineEdit" name="dayTime_Display">
     <property name="geometry">
      <rect>
-      <x>335</x>
+      <x>356</x>
       <y>5</y>
-      <width>255</width>
-      <height>28</height>
+      <width>194</width>
+      <height>24</height>
      </rect>
     </property>
     <property name="font">
@@ -155,7 +165,9 @@
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:#000000; color:#00ff00</string>
+     <string notr="true">background-color: #000000;
+color: #00ff00;
+</string>
     </property>
     <property name="text">
      <string/>
@@ -171,62 +183,86 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>40</y>
+      <y>34</y>
       <width>285</width>
-      <height>45</height>
+      <height>35</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>微软雅黑</family>
-      <pointsize>20</pointsize>
+      <pointsize>18</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: #8bc34a;
+</string>
+    </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; color:#8bc34a;&quot;&gt;R&amp;amp;S设备批量运维&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>网络设备批量运维助手</string>
     </property>
    </widget>
    <widget class="QLabel" name="Select_File_Label">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>170</y>
+      <y>143</y>
       <width>180</width>
-      <height>28</height>
+      <height>22</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>微软雅黑</family>
       <pointsize>10</pointsize>
-      <weight>50</weight>
-      <bold>false</bold>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: #ffffff;
+</string>
+    </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;选择设备信息文件：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>选择设备信息文件：</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="File_Path_Edit">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>200</y>
-      <width>425</width>
-      <height>25</height>
+      <y>167</y>
+      <width>426</width>
+      <height>24</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>宋体</family>
-      <pointsize>9</pointsize>
+      <family>微软雅黑</family>
+      <pointsize>10</pointsize>
+      <kerning>true</kerning>
      </font>
     </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(51, 51, 55);
-color: rgb(255, 255, 255);</string>
+     <string notr="true">QLineEdit{
+background-color: #333337;
+border: 1px solid #7a7a7a;
+color: #ffffff;
+}
+QLineEdit:hover{
+background-color: #1f1f1f;
+border: 1px solid #7a7a7a;
+color: #ffffff;
+}
+</string>
     </property>
     <property name="text">
      <string/>
@@ -234,14 +270,17 @@ color: rgb(255, 255, 255);</string>
     <property name="alignment">
      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
     </property>
+    <property name="clearButtonEnabled">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QPushButton" name="Select_File_Button">
     <property name="geometry">
      <rect>
       <x>450</x>
-      <y>197</y>
-      <width>101</width>
-      <height>32</height>
+      <y>165</y>
+      <width>100</width>
+      <height>28</height>
      </rect>
     </property>
     <property name="font">
@@ -293,30 +332,9 @@ color: rgb(49, 54, 59);
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>297</y>
+      <y>233</y>
       <width>380</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>微软雅黑</family>
-      <pointsize>10</pointsize>
-      <weight>50</weight>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;输入需要按顺序执行的命令（一行一个）：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-   </widget>
-   <widget class="QPlainTextEdit" name="Scripts_Edit">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>327</y>
-      <width>425</width>
-      <height>150</height>
+      <height>22</height>
      </rect>
     </property>
     <property name="font">
@@ -328,8 +346,45 @@ color: rgb(49, 54, 59);
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(51, 51, 55);
-color: rgb(255, 255, 255);</string>
+     <string notr="true">color: #ffffff;
+</string>
+    </property>
+    <property name="text">
+     <string>输入需要按顺序执行的命令（一行一个）：</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="Scripts_Edit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>257</y>
+      <width>540</width>
+      <height>140</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor" stdset="0">
+     <cursorShape>IBeamCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPlainTextEdit{
+background-color: #333337;
+border: 1px solid #7a7a7a;
+color: #ffffff;
+}
+QPlainTextEdit:hover{
+background-color: #1f1f1f;
+border: 1px solid #7a7a7a;
+color: #ffffff;
+}
+</string>
     </property>
     <property name="plainText">
      <string/>
@@ -342,15 +397,15 @@ color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>150</x>
-      <y>497</y>
-      <width>300</width>
-      <height>50</height>
+      <y>407</y>
+      <width>260</width>
+      <height>38</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>微软雅黑</family>
-      <pointsize>12</pointsize>
+      <pointsize>14</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -393,9 +448,9 @@ color: rgb(49, 54, 59);
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>567</y>
+      <y>455</y>
       <width>130</width>
-      <height>25</height>
+      <height>20</height>
      </rect>
     </property>
     <property name="font">
@@ -406,17 +461,21 @@ color: rgb(49, 54, 59);
       <bold>false</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: #ffffff;
+</string>
+    </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;运行状态信息：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>运行状态信息：</string>
     </property>
    </widget>
    <widget class="QPlainTextEdit" name="Message_Display_Edit">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>594</y>
-      <width>425</width>
-      <height>202</height>
+      <y>477</y>
+      <width>380</width>
+      <height>140</height>
      </rect>
     </property>
     <property name="font">
@@ -431,8 +490,10 @@ color: rgb(49, 54, 59);
      <cursorShape>ArrowCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(51, 51, 55);
-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: #333337;
+border: 1px solid #7a7a7a;
+color: #ffffff;
+</string>
     </property>
     <property name="readOnly">
      <bool>true</bool>
@@ -444,10 +505,10 @@ color: rgb(255, 255, 255);</string>
    <widget class="QPushButton" name="Open_Saved_Dir_Button">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>764</y>
+      <x>410</x>
+      <y>589</y>
       <width>140</width>
-      <height>32</height>
+      <height>28</height>
      </rect>
     </property>
     <property name="font">
@@ -498,10 +559,10 @@ color: rgb(49, 54, 59);
     </property>
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>253</y>
-      <width>160</width>
-      <height>20</height>
+      <x>294</x>
+      <y>201</y>
+      <width>142</width>
+      <height>22</height>
      </rect>
     </property>
     <property name="font">
@@ -512,14 +573,24 @@ color: rgb(49, 54, 59);
       <bold>true</bold>
      </font>
     </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 127);</string>
+     <string notr="true">color: rgb(255, 255, 127);
+</string>
     </property>
     <property name="text">
      <string>使用Telnet连接</string>
     </property>
     <property name="checked">
      <bool>false</bool>
+    </property>
+    <property name="autoRepeat">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QRadioButton" name="Connect_By_SSH_Button">
@@ -528,10 +599,10 @@ color: rgb(49, 54, 59);
     </property>
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>253</y>
-      <width>150</width>
-      <height>20</height>
+      <x>152</x>
+      <y>201</y>
+      <width>142</width>
+      <height>22</height>
      </rect>
     </property>
     <property name="font">
@@ -543,7 +614,8 @@ color: rgb(49, 54, 59);
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 127);</string>
+     <string notr="true">color: rgb(255, 255, 127);
+</string>
     </property>
     <property name="text">
      <string>使用SSH连接</string>
@@ -556,21 +628,25 @@ color: rgb(49, 54, 59);
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>249</y>
-      <width>150</width>
-      <height>28</height>
+      <y>201</y>
+      <width>142</width>
+      <height>22</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>微软雅黑</family>
       <pointsize>10</pointsize>
-      <weight>50</weight>
-      <bold>false</bold>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: #ffffff;
+</string>
+    </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;选择连接方式：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>选择连接方式：</string>
     </property>
    </widget>
    <widget class="QPushButton" name="Message_Display_Clear_Button">
@@ -579,10 +655,10 @@ color: rgb(49, 54, 59);
     </property>
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>717</y>
+      <x>410</x>
+      <y>551</y>
       <width>140</width>
-      <height>32</height>
+      <height>28</height>
      </rect>
     </property>
     <property name="font">
@@ -640,9 +716,9 @@ color: rgb(49, 54, 59);
     <property name="geometry">
      <rect>
       <x>150</x>
-      <y>497</y>
-      <width>300</width>
-      <height>50</height>
+      <y>407</y>
+      <width>260</width>
+      <height>38</height>
      </rect>
     </property>
     <property name="font">
@@ -693,10 +769,10 @@ color: rgb(49, 54, 59);
     </property>
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>717</y>
+      <x>410</x>
+      <y>551</y>
       <width>140</width>
-      <height>32</height>
+      <height>28</height>
      </rect>
     </property>
     <property name="font">
@@ -750,31 +826,36 @@ color: rgb(49, 54, 59);
    <widget class="QLabel" name="Copyright_Display_Label">
     <property name="geometry">
      <rect>
-      <x>405</x>
-      <y>813</y>
+      <x>365</x>
+      <y>632</y>
       <width>185</width>
-      <height>30</height>
+      <height>20</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>宋体</family>
+      <family>微软雅黑</family>
+      <pointsize>10</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: #ffffff;
+</string>
+    </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;© 2022-2023 Vincent慕远&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>© 2022-2023 Vincent慕远</string>
     </property>
     <property name="alignment">
-     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="Count_Status_Label">
     <property name="geometry">
      <rect>
-      <x>64</x>
-      <y>130</y>
+      <x>49</x>
+      <y>113</y>
       <width>350</width>
-      <height>24</height>
+      <height>20</height>
      </rect>
     </property>
     <property name="font">
@@ -786,7 +867,8 @@ color: rgb(49, 54, 59);
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: #8bc34a;</string>
+     <string notr="true">color: #8bc34a;
+</string>
     </property>
     <property name="text">
      <string/>
